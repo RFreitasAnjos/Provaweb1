@@ -1,0 +1,82 @@
+:root{
+    --color-buttons:rgb(42, 50, 61);
+    --background-columns:rgb(245, 245, 245);
+    --text-color:rgb(59, 71, 85);
+}
+/*Font: roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Lora&display=swap');
+
+
+*{margin: 0;padding: 0; box-sizing: border-box; font-family:'Kanit', sans-serif;}
+body{}
+
+/* início header */
+
+header#header_row{display: flex; flex-flow: row wrap;justify-content: space-around; align-items: center;  width: 100%;height: 10vmin; border-bottom:1px solid var(--background-columns) ;}
+header div#header_logo{font-size: 5vmin; font-weight: bolder;}
+header div#header_options{display: flex; flex-flow: row wrap; justify-content: space-around; width: 80vmin;}
+header div#header_options a{text-decoration: none; color: var(--text-color); font-weight: bolder;}
+header div#header_search{}
+header#header_row div#header_search input{border-radius: 3vmin;}
+
+/* fim header */
+
+/* Início section */
+
+section#section_row{ display: flex; flex-flow: row wrap;justify-content: space-around;  width: 100%; border-bottom: 2px solid var(--background-columns);}
+section#section_row div#section_h2_p{width: 70vmin; height: 50vmin; display: flex; flex-flow: column wrap; justify-content: space-around;}
+section#section_row div#section_h2_p h2{width: 40vmin;font-size: 4vmin; }
+section#section_row div#section_h2_p p{width:60vmin; font-size: 3vmin;}
+section#section_row div#section_h2_p div#section_buttons a{text-decoration: none; font-size: 3vmin;font-weight: bold; border: 2px solid var(--color-buttons); border-radius: 30vmin; padding: 1vmin 1vmin;}  
+section#section_row figure{ width: 50vmin; height: 45vmin; background-color: aqua; margin-top: 2vmin;}
+section#section_row figure img{width: 50vmin; height: 45vmin;   align-self: center; justify-self: center;}
+div#section_buttons >:nth-child(1){background-color: var(--color-buttons); color: white;}
+div#section_buttons >:nth-child(2){background-color:white; color: var(--text-color);}
+
+/* Fim section */
+
+/* Início article */
+
+article#article_column{display: flex; flex-flow: column wrap; justify-content: space-around; width: 100%; height:55vmin; text-align: center;}
+article#article_column div#title_div{}
+article#article_column div#title_div h2{font-size: 4vmin;}
+article#article_column div#paragraphy_div{}
+article#article_column div#paragraphy_div p{font-size: 3vmin;}
+article#article_column section{display: flex; flex-flow: row wrap; justify-content: space-around;}
+article#article_column section div{display: flex;flex-flow: column wrap; justify-content: center; align-items: center;  width: 25%;height: 100%;}
+article#article_column section div p{font-size: 2.5vmin;}
+article#article_column section div img{width: 10vmin;}
+article#article_column section div img{width: 10vmin;}
+article#article_column section div img{width: 10vmin;}
+
+/* Fim article */
+
+/* Inicio nav*/
+
+nav#nav_column{ display: flex; flex-flow: column wrap; justify-content:space-around; text-align: center; width: 100%; height: 50vmin; background-color: var(--background-columns);}
+nav#nav_column div#nav_title{width: 100%;}
+nav#nav_column div#nav_title h2{font-size: 4vmin; color: var(--text-color);}
+nav#nav_column div#nav_paragraphy{width: 100%;}
+nav#nav_column div#nav_paragraphy p{font-size: 3vmin; color: var(--text-color);} 
+nav#nav_column figure{display: flex; flex-flow: row wrap;justify-content: space-around; margin-bottom: 1vmin; width: 100%;}
+nav#nav_column figure img{width: 22vmin; height: 20vmin; image-rendering: auto;}
+
+/* fim nav*/
+
+/* Inicio formluario */
+div#div_formulario{width: 100%; height: 80vmin; background-color: white; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center;} 
+div#div_formulario h2{font-size: 5vmin; color: var(--text-color);}
+div#div_formulario form{width: 120vmin; height: 60vmin; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: blueviolet; color: var(--color-buttons); font-weight: bold; font-size: 3vmin;border-radius: 2vmin; }
+div#div_formulario form label#label_name,#label_email{width: 58vmin; height: 5vmin; padding: 1vmin; margin-bottom: 2vmin;}
+div#div_formulario form label input#input_name,#input_email{width: 100%; border: var(--text-color); border-radius: 1vmin; padding: 1vmin;}
+div#div_formulario form label#label_description{width:auto; height: auto; padding: 1vmin; margin-top: 2vmin;}
+div#div_formulario form textarea#Description{ width: 100%; height: 30vmin; border-radius: 1vmin; border: 1px solid var(--background-columns);}
+div#div_formulario form input#button_form{margin-left: 52vmin;  align-self: center ; width: 15vmin; height: 5vmin; background-color: var(--color-buttons);color: var(--background-columns);  border: transparent; border-radius: 5px;}
+
+/* fim do formulario */
+
+footer{height: 10vmin; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; background-color: var(--background-columns); border-top: 1px solid var(--background-columns);}
+footer div a img{width: 5vmin;}
+footer div{display: flex; flex-flow: row wrap; justify-content: space-around; margin-left: 10vmin; width: 25vmin;}
+footer #copyright{margin-right: 10vmin;}
+footer #copyright h4{font-size: 2vmin; color: grey;}
