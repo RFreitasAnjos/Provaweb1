@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet"> 
-    <title>maqups</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico">
+    <title>Megadeth</title>
 </head>
 <body>
     <header id="header_row">
         <div id="header_logo">
-        <a>maqups</a>
+            <a href="#"><img src="img/613b586d1d35ab0004c469e0.png" alt=""></a>
         </div>
         <div id="header_options">
-            <a href="#">Option One</a>
-            <a href="#">Option Two</a>
-            <a href="#">Option Three</a>
+            <ul>
+                <li><a href="#">Option One</a></li>
+                <li><a href="#">Option Two</a></li>
+                <li><a href="#">Option Three</a></li>
+            </ul>
         </div>
-        <div id="header_search">
-            <input type="search">
-        </div>
+        <form method="get" id="header_search">
+            <button type="button"><img src="img/search.png" alt=""></button><input type="search">
+        </form>
     </header>
 
     <section id="section_row">
@@ -31,7 +34,7 @@
             </div>
         </div>
         <figure>
-            <img src="img/CountdownToExtinction.jpg">
+            <img src="img/Aquiehrock.png">
         </figure>
 
     </section>
@@ -57,17 +60,17 @@
     </nav>
         <div id="div_formulario">
             <h2>Submit your entry here</h2>
-            <form action="POST">
-                <label for="" id="label_name">Nome<input type="text" name="name" id="input_name" placeholder="Your name"></label>
-                <label for="" id="label_email">Email Address<input type="email" name="email" id="input_email" placeholder="Email"></label>
-                <label for="" id="label_description">Description</label><textarea id="Description"></textarea>
-                <input id="button_form" type="submit">
+            <form action="#" method="post">
+                <div id="div_name_email">
+                    <label for="" id="label_name">Nome<input type="text" name="name" id="input_name" placeholder="Your name"></label>
+                    <label for="" id="label_email">Email Address<input type="email" name="email" id="input_email" placeholder="Email"></label>
+                </div>
+                <div id="div_textarea_button"><label for="" id="label_description">Description</label><textarea id="Description"></textarea><input id="button_form" type="submit"></div>
             </form>
         </div>
-
     <footer>
         <div><a href="#"><img src="img/icons8-twitter.gif" alt="twitter"></a><a href="#"><img src="img/icons8-instagram.gif" alt="instagram"></a><a href="#"><img src="img/icons8-facebook.gif" alt="facebook"></a></div>
-        <div id="copyright"><h4>&copy; 2019 Moqups</h4></div>
+        <div id="copyright"><h4>&copy; 2023 Moqups</h4></div>
     </footer>
 </body>
 </html>

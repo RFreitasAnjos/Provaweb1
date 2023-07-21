@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../prodesign.com.br"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Prova Web"
+	}
+}

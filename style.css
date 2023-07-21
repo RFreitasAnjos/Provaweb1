@@ -1,37 +1,54 @@
 :root{
-    --color-buttons:rgb(42, 50, 61);
+    --backgroundcolor-header:rgb(0,0,0);
+    --backgroundcolor-section:#141111;
+    --color-buttons:#502e73;
+    --color-button-hover:#2e104c;
+    --color-button-hover2:#7c4cac;
     --background-columns:rgb(245, 245, 245);
-    --text-color:rgb(59, 71, 85);
+    --text-color:#f9d155;
+    --text-color-hover:#cb764c;
 }
 /*Font: roboto*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Bebas+Neue&family=Crimson+Text:ital@1&family=Kanit&family=Lora&display=swap');
 
-
-*{margin: 0;padding: 0; box-sizing: border-box; font-family:'Kanit', sans-serif;}
+*{margin: 0;padding: 0; box-sizing: border-box; font-family:'Amiri', serif;}
 body{}
 
 /* início header */
 
-header#header_row{display: flex; flex-flow: row wrap;justify-content: space-around; align-items: center;  width: 100%;height: 10vmin; border-bottom:1px solid var(--background-columns) ;}
-header div#header_logo{font-size: 5vmin; font-weight: bolder;}
-header div#header_options{display: flex; flex-flow: row wrap; justify-content: space-around; width: 80vmin;}
-header div#header_options a{text-decoration: none; color: var(--text-color); font-weight: bolder;}
-header div#header_search{}
-header#header_row div#header_search input{border-radius: 3vmin;}
+header#header_row{display: flex; flex-flow: row wrap; justify-content: space-evenly; align-items: center;background-color: var(--backgroundcolor-header); width: 100%;height: 10vmin; border-bottom:1px solid var(--background-columns) ;}
+header div#header_logo{width: 20vmin;}
+header div#header_logo a img{width: 20vmin;}
+header div#header_options{display: flex; flex-flow: row wrap; justify-content: space-around; width: 60vmin;}
+header div#header_options li{text-align: center; width: 20vmin;height: 5vmin;}
+header div#header_options a{text-decoration: none; color: var(--text-color); font-weight: bolder; font-size: 2.3vmin;}
+header div#header_options a:hover{color:var(--text-color-hover);font-size: 3vmin; transition: 1s;}
+header div#header_options ul{display: flex;flex-flow: row wrap;justify-content: space-around;  list-style: none; display: flex; width: 100%;}
+header form#header_search{border: 1px solid gold; border-radius: 30px; width: 30vmin;background-color: white;}
+header#header_row form#header_search input{width: 20vmin; border: transparent;}
+header#header_row form#header_search img{width:100%;}
+header#header_row form#header_search button{width: 30px;background-color: white;border: transparent;border-radius: 30px;}
 
 /* fim header */
 
 /* Início section */
 
-section#section_row{ display: flex; flex-flow: row wrap;justify-content: space-around;  width: 100%; border-bottom: 2px solid var(--background-columns);}
-section#section_row div#section_h2_p{width: 70vmin; height: 50vmin; display: flex; flex-flow: column wrap; justify-content: space-around;}
-section#section_row div#section_h2_p h2{width: 40vmin;font-size: 4vmin; }
-section#section_row div#section_h2_p p{width:60vmin; font-size: 3vmin;}
-section#section_row div#section_h2_p div#section_buttons a{text-decoration: none; font-size: 3vmin;font-weight: bold; border: 2px solid var(--color-buttons); border-radius: 30vmin; padding: 1vmin 1vmin;}  
-section#section_row figure{ width: 50vmin; height: 45vmin; background-color: aqua; margin-top: 2vmin;}
-section#section_row figure img{width: 50vmin; height: 45vmin;   align-self: center; justify-self: center;}
-div#section_buttons >:nth-child(1){background-color: var(--color-buttons); color: white;}
-div#section_buttons >:nth-child(2){background-color:white; color: var(--text-color);}
+section#section_row{background-color: var(--backgroundcolor-section); display: flex; flex-flow: row wrap;justify-content: space-around;  width: 100%; border-bottom: 2px solid var(--);}
+section#section_row div#section_h2_p{ width: 70vmin; height: 50vmin; display: flex; flex-flow: column wrap; justify-content: space-around;}
+section#section_row div#section_h2_p h2{width: 40vmin;font-size: 4vmin; color: beige;}
+section#section_row div#section_h2_p p{width:60vmin; font-size: 3vmin; color: white;}
+section#section_row div#section_h2_p div#section_buttons a{ text-decoration: none; font-size: 3vmin;font-weight: bold; border: 2px solid var(--color-buttons); border-radius: 30vmin; padding: 1vmin 1vmin;}  
+section#section_row figure{ width: 60vmin; height: 50vmin; background-color: transparent; margin-top: 2vmin;}
+section#section_row figure img{width: 60vmin; height: 50vmin; padding-bottom: 1vmin; animation: floatimg 4s ease-in-out infinite; transition: 1s;}
+@keyframes floatimg {
+    0%{transform: rotateY('30deg');}
+    50%{transform: rotateY(90deg);}
+    100%{transform: rotateY('30deg');}
+}
+div#section_buttons >:nth-child(1){background-color: var(--color-buttons); color: white; transition: 1s;}
+div#section_buttons >:nth-child(1):hover{background-color: var(--color-button-hover);}
+div#section_buttons >:nth-child(2){background-color:white; color: var(--color-button-hover2); transition: 1s;}
+div#section_buttons >:nth-child(2):hover{background-color: var(--color-button-hover2); color: var(--background-columns);}
 
 /* Fim section */
 
@@ -53,25 +70,31 @@ article#article_column section div img{width: 10vmin;}
 
 /* Inicio nav*/
 
-nav#nav_column{ display: flex; flex-flow: column wrap; justify-content:space-around; text-align: center; width: 100%; height: 50vmin; background-color: var(--background-columns);}
+nav#nav_column{ display: flex; flex-flow: column wrap; justify-content:space-around; text-align: center; width: 100%; height: 50vmin; background-color: var(--backgroundcolor-section);}
 nav#nav_column div#nav_title{width: 100%;}
 nav#nav_column div#nav_title h2{font-size: 4vmin; color: var(--text-color);}
 nav#nav_column div#nav_paragraphy{width: 100%;}
 nav#nav_column div#nav_paragraphy p{font-size: 3vmin; color: var(--text-color);} 
 nav#nav_column figure{display: flex; flex-flow: row wrap;justify-content: space-around; margin-bottom: 1vmin; width: 100%;}
 nav#nav_column figure img{width: 22vmin; height: 20vmin; image-rendering: auto;}
+nav#nav_column figure img:hover{animation: around 1s ease-in-out;}
+@keyframes around {
+    0%{transform: rotateY(0deg);}
+    50%{transform: rotateY(90deg);}
+    100%{transform: rotateY(0deg);}
+}
 
 /* fim nav*/
 
 /* Inicio formluario */
 div#div_formulario{width: 100%; height: 80vmin; background-color: white; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center;} 
 div#div_formulario h2{font-size: 5vmin; color: var(--text-color);}
-div#div_formulario form{width: 120vmin; height: 60vmin; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: blueviolet; color: var(--color-buttons); font-weight: bold; font-size: 3vmin;border-radius: 2vmin; }
+div#div_formulario form{width: 150vmin; height: 60vmin; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: var(--backgroundcolor-section); color: var(--color-buttons); font-weight: bold; font-size: 3vmin;border-radius: 2vmin; }
 div#div_formulario form label#label_name,#label_email{width: 58vmin; height: 5vmin; padding: 1vmin; margin-bottom: 2vmin;}
 div#div_formulario form label input#input_name,#input_email{width: 100%; border: var(--text-color); border-radius: 1vmin; padding: 1vmin;}
-div#div_formulario form label#label_description{width:auto; height: auto; padding: 1vmin; margin-top: 2vmin;}
-div#div_formulario form textarea#Description{ width: 100%; height: 30vmin; border-radius: 1vmin; border: 1px solid var(--background-columns);}
-div#div_formulario form input#button_form{margin-left: 52vmin;  align-self: center ; width: 15vmin; height: 5vmin; background-color: var(--color-buttons);color: var(--background-columns);  border: transparent; border-radius: 5px;}
+div#div_formulario form div#div_textarea_button label#label_description{width:auto; height: auto; padding: 1vmin; margin-top: 2vmin;}
+div#div_formulario form div#div_textarea_button textarea#Description{padding: 5vmin; width: 99%; height: 30vmin; border-radius: 1vmin; border: 1px solid var(--background-columns);}
+div#div_formulario form div#div_textarea_button input#button_form{margin-left: 52vmin;  align-self: center ; width: 15vmin; height: 5vmin; background-color: var(--color-buttons);color: var(--background-columns);  border: transparent; border-radius: 5px;}
 
 /* fim do formulario */
 
